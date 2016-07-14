@@ -1,4 +1,4 @@
-# League of Legends Stat Finder Custom Skill
+# Alexa Custom Skill: League of Legends Stat Finder
 
 **NOTICE: this project is still in development and has limited functionality**
 
@@ -39,3 +39,4 @@ AWS Lambda and Node JS, that returns stat information for League of Legend playe
 5. Once the function is created in AWS, grab the ARN from the top right corner of the AWS Lambda Browser UI
 
 6. When prompted in your Alexa Skill creation process, enter the ARN into the appropriate text field
+ Format: ![Alt Text](http://imgur.com/eivCsLD)
