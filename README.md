@@ -21,7 +21,7 @@ AWS Lambda and Node JS, that returns stat information for League of Legend playe
 
 2. Open up the index.js file. There are 3 fields that need to be filled in.
  * `var API_BASE = "<your_riot_api_key>` - the string value should be replaced with your personal 
- developer API from your developer account with Riot.
+ developer API KEY from your developer account with Riot.
  If you don't have one, start here [Riot Developer Site](https://developer.riotgames.com/)
  * `var SUMMONER_ID = "<your_summoner_id>` - the string value should be replaced with your personal summoner ID.
  This can also be found on the [Riot Developer Site](https://developer.riotgames.com/) by logging into your account
