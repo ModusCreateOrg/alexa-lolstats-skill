@@ -188,6 +188,7 @@ function getCurrentPlayerMostPlayed(callback) {
 		})
 }
 
+// Finds Champion by ID
 function getChampByID(id, callback) {
 
 	let CHAMP_API = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/" + id + "?api_key=" + API_BASE;
@@ -205,6 +206,8 @@ function getChampByID(id, callback) {
 		})
 }
 
+
+// Ends Alexa Session if done intentionally by user
 function handleSessionEndRequest(callback) {
 	let cardTitle = "LoL - Thanks";
 	let speechOutput = "Goodbye for now, Summoner";
@@ -213,6 +216,8 @@ function handleSessionEndRequest(callback) {
 	callback(null, buildResponse({}, buildSpeechletResponse(cardTitle, speechOutput, None, shouldEndSession)));
 }
 
+
+// Builds the speech output
 function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
 	return {
 		"outputSpeech": {
@@ -234,6 +239,7 @@ function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
 	}
 }
 
+// Builds the entire response
 function buildResponse(sessionAttributes, speechletReponse) {
 	return {
 		"version": "1.0",
@@ -242,52 +248,4 @@ function buildResponse(sessionAttributes, speechletReponse) {
 	}
 }
 
-
-// var event = {
-//   "session": {
-//     "sessionId": "SessionId.942fab75-3a42-43af-ae5f-957e2d48525a",
-//     "application": {
-//       "applicationId": "amzn1.echo-sdk-ams.app.ba80548d-ec48-4479-9641-5e48d2b54345"
-//     },
-//     "attributes": {},
-//     "user": {
-//       "userId": "amzn1.ask.account.AFP3ZWPOS2BGJR7OWJZ3DHPKMOMNWY4AY66FUR7ILBWANIHQN73QGES22MSIICZIPJSH6CM4NNFQUKAR7XOOIAKW3ZX25OBF7LTLWDCPNYBUEEJFKJLRJPNYMHFQCAQDZTYF5UHMEIPFY6UECRMLY3WXKKFICFUPWCYEGUGMBTMFXEANSG2ZDYFRWCQIMM5OPOQHBAPCZDFTWGI"
-//     },
-//     "new": true
-//   },
-//   "request": {
-//     "type": "IntentRequest",
-//     "requestId": "EdwRequestId.9cee108c-9507-44cf-bf9d-fe6de5fac3b2",
-//     "timestamp": "2016-07-13T21:55:37Z",
-//     "intent": {
-//       "name": "GetMyRank",
-//       "slots": {}
-//     },
-//     "locale": "en-US"
-//   },
-//   "version": "1.0"
-// }
-
-// try {
-// 	event.session.application.applicationId !=
-// 		"amzn1.echo-sdk-ams.app.ba80548d-ec48-4479-9641-5e48d2b54345"
-// }
-// catch (err) {
-// 	event.session.application.applicationID = err.message;
-// }
-
-// if(event.session.new) {
-// 	onSessionStarted({"requestId": event.request.requestId}, event.session);
-// }
-
-// if(event.request.type === "LaunchRequest") {
-// 	return onLaunch(event.request, event.session);
-// }
-// else if(event.request.type === "IntentRequest") {
-// 	// return onIntent(event.request, event.session);
-// 	console.log(onIntent(event.request, event.session));
-// }
-// else {
-// 	return onSessionEnded();
-// }
 
