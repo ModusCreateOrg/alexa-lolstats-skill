@@ -1,0 +1,9 @@
+GetMyRank current
+GetMyRank current rank
+GetMyRank what is my current rank
+GetMyRank what rank am I
+GetMyRank what is my rank
+GetMyMostPlayed current
+GetMyMostPlayed current most played
+GetMyMostPlayed who do I play the most
+GetMyMostPlayed who do I play most frequent

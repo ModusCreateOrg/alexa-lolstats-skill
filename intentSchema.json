@@ -1,0 +1,19 @@
+{
+	"intents": [
+		{
+			"intent": "GetMyRank"		
+		},
+		{
+			"intent": "GetMyMostPlayed"
+		},
+		{
+			"intent": "AMAZON.HelpIntent"
+		},
+		{
+			"intent": "AMAZON.StopIntent"
+		},
+		{
+			"intent": "AMAZON.CancelIntent"
+		}
+	]
+}
