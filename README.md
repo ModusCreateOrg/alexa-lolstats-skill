@@ -17,7 +17,7 @@ AWS Lambda and Node JS, that returns stat information for League of Legend playe
  npm install
  ```
 
- This will install the packages `isomorphic-fetch` and `es6-promise`
+ This will install the packages `isomorphic-fetch` and `es6-promise`. The first is just a simple plugin we use to get API calls and return them as JSON and the second polyfills our es6 promises.
 
 2. Open up the index.js file. There are 3 fields that need to be filled in.
  * `var API_BASE = "<your_riot_api_key>` - the string value should be replaced with your personal 
@@ -39,4 +39,9 @@ AWS Lambda and Node JS, that returns stat information for League of Legend playe
 5. Once the function is created in AWS, grab the ARN from the top right corner of the AWS Lambda Browser UI
 
 6. When prompted in your Alexa Skill creation process, enter the ARN into the appropriate text field
- Format: ![Alt Text](http://imgur.com/eivCsLD)
+ ![Screenshot](/screenshots/arn-input.png)
+
+And that's it! your function is added to the skill and you can begin testing your skill in the Alexa console. Again, if you need help with this, I advise you check out Simon's blog post above.
+
+
+--  shoutout to @simonprickett for help with troubleshooting and being the inspiration for the project in the first place. Shoutout to @dmackerman for tips on handling API requests.
