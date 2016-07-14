@@ -41,6 +41,8 @@ AWS Lambda and Node JS, that returns stat information for League of Legend playe
 6. When prompted in your Alexa Skill creation process, enter the ARN into the appropriate text field
  ![Screenshot](/screenshots/arn-input.png)
 
+# Wrap Up
+
 And that's it! your function is added to the skill and you can begin testing your skill in the Alexa console. Again, if you need help with this, I advise you check out Simon's blog post above.
 
 
