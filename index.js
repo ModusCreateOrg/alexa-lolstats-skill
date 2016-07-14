@@ -6,6 +6,8 @@ require('isomorphic-fetch');
 // Your Riot API Key
 var API_BASE="<your_riot_api>";
 
+var SUMMONER_ID = "<your_summoner_id>";
+
 
 // Figures out what Lambda Function to run
 
@@ -99,8 +101,8 @@ var getCurrentPlayerRank = (callback) => {
 	let cardTitle = "LoL Player Rank";
 	let repromptText = "";
 	let shouldEndSession = false;
-	let RANK_API = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/55517090/entry?api_key=" + API_BASE;
-	let summonerID = 55517090;
+	let RANK_API = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + SUMMONER_ID + "/entry?api_key=" + API_BASE;
+	
 
 	fetch(RANK_API)
 		.then(function(response) {
@@ -112,9 +114,9 @@ var getCurrentPlayerRank = (callback) => {
 		.then(function(summonerInfo) {
 			console.log(summonerInfo);
 			let response = summonerInfo;
-			let rank = response[summonerID][0].tier 
+			let rank = response[SUMMONER_ID][0].tier 
 			+ " " 
-			+ response[summonerID][0].entries[0].division;
+			+ response[SUMMONER_ID][0].entries[0].division;
 
 			let speechOutput = "Your rank is " + rank;
 			console.log(speechOutput);
@@ -131,8 +133,7 @@ function getCurrentPlayerMostPlayed(callback) {
 	let cardTitle = "LoL Champion Most Played";
 	let repromptText = "";
 	let shouldEndSession = false;
-	let MPLAYED_API = "https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/55517090/recent?api_key=" + API_BASE;
-	let summonerID = 55517090;
+	let MPLAYED_API = "https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/" + SUMMONER_ID + "/recent?api_key=" + API_BASE;
 
 	fetch(MPLAYED_API)
 		.then(function(response) {
